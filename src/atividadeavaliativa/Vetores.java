@@ -238,6 +238,30 @@ public class Vetores {
         }
 
     }
+    
+    public void sacarCorrente() {
+        Scanner read = new Scanner(System.in);
+        System.out.println("Qual o id para busca? ");
+
+        int x = read.nextInt();
+        int resultado = this.searchByIdC(x);
+
+        System.out.println("resultado busca: " + resultado);
+
+        if (resultado >= 0) {
+            System.out.println("Conta poupanca encontrada!");
+            System.out.println("Quanto deseja sacar?");
+            float saque = read.nextFloat();
+            while (saque < 0) {
+                System.out.println("Quantia invalida! ");
+                System.out.println("Quanto deseja sacar?");
+                saque = read.nextFloat();
+            }
+
+            contaC[resultado].sacar(saque);
+        }
+
+    }
 
     public void depositarC() {
         Scanner read = new Scanner(System.in);
