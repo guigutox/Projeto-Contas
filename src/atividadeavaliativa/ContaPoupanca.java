@@ -28,7 +28,7 @@ public class ContaPoupanca extends Conta {
         System.out.println("Id: " + super.getId());
         System.out.println("Nome: " + super.getNome());
         System.out.println("Idade: " + super.getIdade());
-        System.out.println("Saldo: " + super.getSaldo());
+        System.out.println("Saldo: R$" + super.getSaldo());
 
     }
 
@@ -39,8 +39,8 @@ public class ContaPoupanca extends Conta {
             super.setSaldo((super.getSaldo() - x)-this.tarifaDeSaque  );
             
             System.out.println("Uma taxa de 5% no valor o saque sera cobrado");
-            
-            System.out.println("Saldo atual: " + super.getSaldo());
+            System.out.println("Taxa: R$"+this.tarifaDeSaque);
+            System.out.println("Saldo atual: R$" + super.getSaldo());
 
         } else {
             System.out.println("Saldo insuficiente");
@@ -58,7 +58,7 @@ public class ContaPoupanca extends Conta {
     public void depositar(float x) {
         super.setSaldo(x + super.getSaldo());
         System.out.println("Deposito realizado com sucesso!");
-        System.out.println("Saldo atual: " + super.getSaldo());
+        System.out.println("Saldo atual: R$" + super.getSaldo());
 
     }
 

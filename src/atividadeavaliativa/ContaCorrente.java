@@ -29,14 +29,14 @@ public class ContaCorrente extends Conta {
             System.out.println("Id: "+super.getId());
             System.out.println("Nome: "+super.getNome());
             System.out.println("Idade: "+super.getIdade());
-            System.out.println("Saldo: "+super.getSaldo());
+            System.out.println("Saldo: R$"+super.getSaldo());
     }
     
     @Override
     public void sacar(float x){
         if(super.getSaldo() >= x){
         super.setSaldo(super.getSaldo() - x);
-        System.out.println("Saldo atual: "+super.getSaldo());
+        System.out.println("Saldo atual: R$"+super.getSaldo());
         
         }
         else{
@@ -79,7 +79,7 @@ public class ContaCorrente extends Conta {
     public void depositar(float x){
         super.setSaldo(x+super.getSaldo());
         System.out.println("Deposito realizado com sucesso!");
-        System.out.println("Saldo atual: "+super.getSaldo());
+        System.out.println("Saldo atual: R$"+super.getSaldo());
         
         
     }

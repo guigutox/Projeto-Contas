@@ -34,7 +34,7 @@ public class Vetores {
 
             contaP[contadorP] = new ContaPoupanca(idade, saldo, nome);
 
-            System.out.println("Dados: \n" + "id:" + contaP[contadorP].getId() + "\nidade: " + idade + "\nsaldo: " + saldo + "\nNome: " + nome + "\nContador: " + contadorP);
+            System.out.println("Dados: \n" + "id:" + contaP[contadorP].getId() + "\nidade: " + idade + "\nsaldo: R$" + saldo + "\nNome: " + nome + "\nContador: " + contadorP);
             contadorP++;
 
         } else {
@@ -300,7 +300,7 @@ public class Vetores {
 
             if (contaP[i].getSaldo() >= busca) {
                 System.out.println("ID: " + contaP[i].getId());
-                System.out.println("Saldo: " + contaP[i].getSaldo());
+                System.out.println("Saldo: R$" + contaP[i].getSaldo());
                 achou++;
 
             }
@@ -308,7 +308,7 @@ public class Vetores {
         for (int i = 0; i < contadorC; i++) {
             if (contaC[i].getSaldo() > busca) {
                 System.out.println("ID: " + contaC[i].getId());
-                System.out.println("Saldo: " + contaC[i].getSaldo());
+                System.out.println("Saldo: R$" + contaC[i].getSaldo());
                 achou++;
             } else {
                 System.out.println("Nenhum registro encontrado");
