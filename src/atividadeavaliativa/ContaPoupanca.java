@@ -35,7 +35,7 @@ public class ContaPoupanca extends Conta {
     @Override
     public void sacar(float x) {
         if (super.getSaldo() >= x) {
-            this.tarifaDeSaque = (float) ((super.getSaldo()- x * 0.5));
+            this.tarifaDeSaque = (float) (x * 0.05);
             super.setSaldo((super.getSaldo() - x)-this.tarifaDeSaque  );
             
             System.out.println("Uma taxa de 5% no valor o saque sera cobrado");

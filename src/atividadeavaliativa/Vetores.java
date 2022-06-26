@@ -64,7 +64,6 @@ public class Vetores {
         int x = read.nextInt();
         int resultado = this.searchByIdP(x);
 
-        System.out.println("resultado busca: " + resultado);
 
         if (resultado >= 0) {
             System.out.println("Conta poupanca encontrada!");
@@ -100,13 +99,13 @@ public class Vetores {
         int x = read.nextInt();
         int resultado = this.searchByIdP(x);
 
-        System.out.println("resultado busca: " + resultado);
+       
 
         if (resultado >= 0) {
             System.out.println("Conta poupanca encontrada!");
             System.out.println("Quanto deseja sacar?");
             float saque = read.nextFloat();
-            while (saque < 0) {
+            while (saque <= 0) {
                 System.out.println("Quantia invalida! ");
                 System.out.println("Quanto deseja sacar?");
                 saque = read.nextFloat();
@@ -125,7 +124,6 @@ public class Vetores {
         int x = read.nextInt();
         int resultado = this.searchByIdP(x);
 
-        System.out.println("resultado busca: " + resultado);
 
         if (resultado >= 0) {
             System.out.println("Conta poupanca encontrada!");
@@ -227,7 +225,6 @@ public class Vetores {
         int x = read.nextInt();
         int resultado = this.searchByIdC(x);
 
-        System.out.println("resultado busca: " + resultado);
 
         if (resultado >= 0) {
             System.out.println("Conta corrente encontrada!");
@@ -246,13 +243,13 @@ public class Vetores {
         int x = read.nextInt();
         int resultado = this.searchByIdC(x);
 
-        System.out.println("resultado busca: " + resultado);
+
 
         if (resultado >= 0) {
             System.out.println("Conta poupanca encontrada!");
             System.out.println("Quanto deseja sacar?");
             float saque = read.nextFloat();
-            while (saque < 0) {
+            while (saque <= 0) {
                 System.out.println("Quantia invalida! ");
                 System.out.println("Quanto deseja sacar?");
                 saque = read.nextFloat();
