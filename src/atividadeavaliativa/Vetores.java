@@ -5,15 +5,46 @@ import java.util.Random;
 
 public class Vetores {
 
-    private ContaPoupanca contaP[] = new ContaPoupanca[10];
-    private ContaCorrente contaC[] = new ContaCorrente[10];
+    private ContaPoupanca contaP[] = new ContaPoupanca[30];
+    private ContaCorrente contaC[] = new ContaCorrente[30];
 
     private int contadorP = 0, contadorC = 0;
-
+    public Vetores(){
+        
+        //CONSTRUTORES DE TESTE CONTA POUPANCA
+        contaP[0] = new ContaPoupanca(13, (float) 100.0,"Alessandra");
+        contaP[1] = new ContaPoupanca(14,200,"Barbara");
+        contaP[2] = new ContaPoupanca(15,300,"Carlos");
+        contaP[3] = new ContaPoupanca(16,400,"Daniel");
+        contaP[4] = new ContaPoupanca(17,500,"Eliel");
+        contaP[5] = new ContaPoupanca(18,600,"Fagner");
+        contaP[6] = new ContaPoupanca(19,700,"Guilherme");
+        contaP[7] = new ContaPoupanca(20,800,"Heitor");
+        contaP[8] = new ContaPoupanca(21,900,"Icaro");
+        contadorP = 9;
+        
+        //CONSTRUTORES DE TESTE CONTA CORRENTE
+        contaC[0] = new ContaCorrente(18,100,"Antonio");
+        contaC[1] = new ContaCorrente(19,200,"Bob");
+        contaC[2] = new ContaCorrente(20,300,"Catarina");
+        contaC[3] = new ContaCorrente(21,400,"Daniela");
+        contaC[4] = new ContaCorrente(22,500,"Elias");
+        contaC[5] = new ContaCorrente(23,600,"Fernandim");
+        contaC[6] = new ContaCorrente(24,700,"Gabs");
+        contaC[7] = new ContaCorrente(25,800,"Helio");
+        contaC[8] = new ContaCorrente(26,900,"Igor");
+        contadorC = 9;   
+        
+    
+    }
+    
+    
     public void cadastrarPoupanca() {
 
         Scanner read = new Scanner(System.in);
         Random gerador = new Random();
+        
+
 
         int idade;
         float saldo;
@@ -292,7 +323,9 @@ public class Vetores {
         System.out.println("Listar contas por saldo");
         System.out.println("Digite procurar contas com saldo maior ou igual que: ");
         float busca = read.nextFloat();
-
+            System.out.println("\t-----------------");
+            System.out.println("\tCONTAS POUPANCAS");
+            System.out.println("\t-----------------\n");
         for (int i = 0; i < contadorP; i++) {
 
             if (contaP[i].getSaldo() >= busca) {
@@ -302,6 +335,10 @@ public class Vetores {
 
             }
         }
+            System.out.println("\n\t-----------------");
+            System.out.println("\tCONTAS CORRENTES!");
+            System.out.println("\t-----------------\n");
+        
         for (int i = 0; i < contadorC; i++) {
             if (contaC[i].getSaldo() > busca) {
                 System.out.println("ID: " + contaC[i].getId());
@@ -313,6 +350,7 @@ public class Vetores {
             }
 
         }
+        
         if (achou == 0) {
             System.out.println("NENHUM REGISTRO ENCONTRADO");
         }
